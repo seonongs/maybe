@@ -1,18 +1,17 @@
 <template>
   <div class="header">
-    <b-card>
-      <router-link to="/"><b-card-text>Home</b-card-text></router-link>
-    </b-card>
-
+    <b-button-group>
+      <router-link to="/"><b-button class="mx-1" variant="outline-secondary">Home</b-button></router-link>
+      <router-link to="/board"><b-button class="mx-1" variant="outline-secondary">Board</b-button></router-link>
+      <router-link to="/"><b-button class="mx-1" variant="outline-secondary">Login</b-button></router-link>
+    </b-button-group>
   </div>
 </template>
 
 <script>
 
-import {BCardText} from "bootstrap-vue-3";
 export default {
   name: "HeaderCom",
-  components: {BCardText},
   methods: {
   }
 }
@@ -21,7 +20,7 @@ export default {
 <style scoped>
 .header {
   color: #666;
-  border: 1px solid #211f1f;
+  /*border: 1px solid #211f1f;*/
 }
 
 a:link { /*링크 방문 전*/
